@@ -1,0 +1,11 @@
+/* CSS_Lists.css */
+
+/* Styling for an ordered list */
+ol {
+    list-style-type: decimal; /* Change the list-style-type for ordered list to decimal */
+}
+
+/* Styling for an unordered list */
+ul {
+    list-style-type: square; /* Change the list-style-type for unordered list to square */
+}

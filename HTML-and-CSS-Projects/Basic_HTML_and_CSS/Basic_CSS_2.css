@@ -1,0 +1,14 @@
+
+
+.my-custom-paragraph {
+    color: #3366cc; /* blue color */
+    background-color: #ffcc00; /* yellow background */
+    font-size: 16px; /* font size in pixels */
+    text-align: center;
+}
+/* Basic_CSS_2.css */
+
+/* Adding a text-shadow to the element with class 'shadow-example' */
+.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,27 @@
+/* CSS_Table.css */
+
+/* Styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f2f2f2; /* Background color */
+}
+
+/* Styling for table headers and cells */
+th, td {
+    border: 1px solid #000; /* Border color */
+    padding: 8px;
+    text-align: center;
+}
+
+/* Styling for header background */
+thead {
+    background-color: #0066cc; /* Header background color */
+    color: white; /* Font color for header */
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+}

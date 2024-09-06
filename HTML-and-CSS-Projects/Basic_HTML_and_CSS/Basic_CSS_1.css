@@ -1,0 +1,12 @@
+/* Basic_CSS_1.css */
+
+p {
+    text-align: center;
+    color: blue;
+}
+ 
+.custom-div {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
