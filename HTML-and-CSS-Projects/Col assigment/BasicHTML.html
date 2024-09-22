@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML with Columns styling</title>
+    <style>
+        /* Styling each column using <col> */
+        col.col1 {
+            background-color: lightblue;
+        }
+        col.col2 {
+            background-color: lightgreen;
+        }
+        col.col3 {
+            background-color: lightcoral;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basic Webpage with Table Columns</h1>
+
+    <table>
+        <!-- Defining  columns using <col> inside <colgroup> -->
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Col 1</td>
+                <td>Row 1, Col 2</td>
+                <td>Row 1, Col 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Col 1</td>
+                <td>Row 2, Col 2</td>
+                <td>Row 2, Col 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Col 1</td>
+                <td>Row 3, Col 2</td>
+                <td>Row 3, Col 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
