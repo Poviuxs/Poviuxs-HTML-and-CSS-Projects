@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baltic Bee Hives</title>
-  <link rel="stylesheet" href="../One-Page Website/css/one_page_website.css.">
+  <link rel="stylesheet" href="./css/one_page.css">
 </head>
 <body>
 
@@ -28,15 +28,76 @@
 
   <!-- Pictures -->
   <section id="pictures">
-    <div>
-      <img src="beehive_1.png" alt="Natural beehives" />
-      <p>Experience the purity of beekeeping with our all-natural pine wood beehives, crafted for the well-being of your bees and the beauty of your apiary.</p>
+    <h2>Our Beehives</h2>
+
+    <!-- Lightbox Gallery -->
+    <div class="row">
+      <div class="column">
+        <img src="beehive_1.png" onclick="openModal();currentSlide(1)" alt="Natural Beehive" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="beehive_2.png" onclick="openModal();currentSlide(2)" alt="Colorful Beehive" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="beehive_3.jpeg" onclick="openModal();currentSlide(3)" alt="Wooden Beehive" class="hover-shadow">
+      </div>
+      <div class="column">
+        <img src="beehive_4.jpeg" onclick="openModal();currentSlide(4)" alt="Painted Beehive" class="hover-shadow">
+      </div>
     </div>
 
-    <div>
-      <img src="beehive_2.png" alt="Colorful beehives" />
-      <p>Elevate your apiary with our customizable pine wood beehives, meticulously crafted for bee well-being and personal design.</p>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="beehive_1.png"width:100%" alt="Natural Beehive">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="beehive_2.png" style="width:100%" alt="Colorful Beehive">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="beehive_3.jpeg" style="width:100%" alt="Wooden Beehive">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="beehive_4.jpeg" style="width:100%" alt="Painted Beehive">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="row">
+          <div class="column">
+            <img class="demo" src="beehive_1_thumb.png" onclick="currentSlide(1)" alt="Type 1">
+          </div>
+          <div class="column">
+            <img class="demo" src="beehive_2 _thumb.png" onclick="currentSlide(2)" alt="Type 2">
+          </div>
+          <div class="column">
+            <img class="demo" src="beehive_3 _thumb.jpeg" onclick="currentSlide(3)" alt="Type 3">
+          </div>
+          <div class="column">
+            <img class="demo" src="beehive_4_thumb.jpeg" onclick="currentSlide(4)" alt="Type4">
+          </div>
+        </div>
+      </div>
     </div>
+
   </section>
   <!-- End of Pictures -->
 
@@ -73,5 +134,6 @@
   </footer>
   <!-- End of Footer -->
 
+  <script src="./js/script.js"></script>
 </body>
 </html>
