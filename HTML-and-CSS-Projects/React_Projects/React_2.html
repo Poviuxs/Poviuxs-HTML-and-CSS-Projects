@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React  Assigment</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+</head>
+<body>
+    <!-- HTML element where the like button will be rendered -->
+    <div id="like_button_container"></div>
+    <script>
+        const X = React.createElement; // Shorthand for React.createElement
+      
+        class LikeButton extends React.Component {
+          constructor(props) {
+            super(props);
+            // Initialize the component's state
+            this.state = { liked: false };
+          }
+      
+          // Render method to display the button
+          render() {
+            // If the button has been clicked (liked is true), display a message
+            if (this.state.liked) {
+              return "You clicked the like button!";
+            }
+      
+            // Otherwise, display the "Like" button
+            return X(
+              'button',
+              { onClick: () => this.setState({ liked: true }) }, // Set liked to true on click
+              'Like' // Text of the button
+            );
+          }
+        }
+      
+        // Select the DOM container where the button will be rendered
+        const domContainer = document.querySelector('#like_button_container');
+        
+        // Render the LikeButton component inside the container
+        ReactDOM.render(X(LikeButton), domContainer);
+      </script>
+</body>
+</html>

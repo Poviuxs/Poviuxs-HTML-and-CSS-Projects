@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React File Assigment</title>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+</head>
+<body>
+    <div id="My_React_Code"></div>
+    <script>
+        // Define the Counter component
+        var Counter = React.createClass({
+            render: function() {
+                // Calculate the time passed in seconds, rounded to 1 decimal place
+                var time_Passed = Math.round(this.props.time_Passed / 100) / 10;
+                var seconds_Passed = time_Passed + ' seconds ago!';
+    
+                // Return a paragraph element with the time passed text
+                return React.DOM.p(null, seconds_Passed);
+            }
+        });
+    
+        // Create a factory for the Counter component
+        var counter_Factory = React.createFactory(Counter);
+    
+        // Get the starting time
+        var start_Counting = new Date().getTime();
+    
+        // Update the counter every 50 milliseconds
+        setInterval(function() {
+            ReactDOM.render(
+                counter_Factory({ time_Passed: new Date().getTime() - start_Counting }), 
+                document.getElementById('My_React_Code')
+            );
+        }, 50);
+    </script>
+
+
+</body>
+</html>

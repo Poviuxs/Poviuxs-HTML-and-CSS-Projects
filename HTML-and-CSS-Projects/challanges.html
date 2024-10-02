@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade-In Effect</title>
+  <style>
+    body {
+      opacity: 0; /* Start with body hidden */
+      transition: opacity 10s ease-in-out; /* Smooth fade-in effect */
+    }
+
+    body.fade-in {
+      opacity: 1; /* Show body when the fade-in class is added */
+    }
+
+    html {
+      background-color: rgb(222, 5, 5); /* Background during the fade transition */
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Content -->
+  <h1>Welcome to My Website</h1>
+  <p>This is an example of a fade-in effect when the page loads.</p>
+
+  <!-- Script to handle fade-in effect -->
+  <script>
+    // Wait for the DOM content to be fully loaded
+    window.addEventListener('DOMContentLoaded', () => {
+      // Add the fade-in class after the DOM is ready
+      document.body.classList.add('fade-in');
+    });
+  </script>
+</body>
+</html>
